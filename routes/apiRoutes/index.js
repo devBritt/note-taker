@@ -1,7 +1,7 @@
 // dependencies
 const router = require('express').Router();
 const { createNewNote } = require('../../lib/notes');
-const notes = require('../../db/db.json');
+const { notes } = require('../../db/db.json');
 const { v4: uuidv4 } = require('uuid');
 
 // add route to send notes list
