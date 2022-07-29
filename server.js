@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // include all routes
-app.use('/api', apiRoutes);
+// app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 // server listener
