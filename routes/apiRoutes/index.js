@@ -12,6 +12,6 @@ router.get('/notes', (req, res) => {
 router.post('/notes', (req, res) => {
     let notesList = notes;
     console.log(notesList);
-})
+});
 
 module.exports = router;
