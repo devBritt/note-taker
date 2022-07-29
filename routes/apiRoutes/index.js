@@ -1,6 +1,6 @@
 // dependencies
 const router = require('express').Router();
-const { createNewNote } = require('../../lib/notes');
+const { createNewNote, deleteNote } = require('../../lib/notes');
 const { notes } = require('../../db/db.json');
 const { v4: uuidv4 } = require('uuid');
 
@@ -31,7 +31,9 @@ router
     .route('/notes/:id')
     .delete((req, res) => {
         let notesList = notes;
-        console.log(notesList.findIndex(item => item.id === req.params.id));
+        
+        deleteNote(req.params.id, notesList);
+        res.end();
     });
 
 module.exports = router;
