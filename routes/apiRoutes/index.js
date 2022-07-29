@@ -9,6 +9,9 @@ router.get('/notes', (req, res) => {
     res.json(results);
 });
 
-
+router.post('/notes', (req, res) => {
+    let notesList = notes;
+    console.log(notesList);
+})
 
 module.exports = router;
